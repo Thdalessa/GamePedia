@@ -1,0 +1,29 @@
+.TitleContainer {
+    border-radius: 50px;
+    background: linear-gradient(145deg, #b9c2ca, #9ca3aa);
+    box-shadow:  38px 38px 31px #7e848a,
+             -38px -38px 31px #dce6f0;
+
+    grid-column:4/6;
+    grid-row: 2/4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+
+}
+
+.Title{
+    color: #212529;
+    font-size: 23px;
+    text-shadow: 0px 0px 21px rgba(0,0,0,0.68);
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+
+.Subtitle{
+    color: #212529;
+    text-shadow: 0px 0px 21px rgba(0,0,0,0.68);
+    grid-column: 1/5;
+    grid-row: 2/3;
+}

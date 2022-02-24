@@ -1,0 +1,29 @@
+.homeButton{
+    grid-row: 5/6   ;
+    grid-column: 4/6;
+
+    border-radius: 29px;
+    background: #adb5bd;
+    box-shadow:  9px 9px 21px #82888e,
+                -9px -9px 21px #d8e2ec;
+
+    width: 50%;
+    margin-left: 90px;
+    text-decoration: none;
+}
+
+.homeButton:hover{
+    border-radius: 29px;
+    background: #adb5bd;
+    box-shadow: inset 9px 9px 21px #82888e,
+                inset -9px -9px 21px #d8e2ec;
+
+    cursor: pointer;
+}
+
+.linkToHome{
+    font-size: 20px;
+    color: #212529;
+    text-shadow: 4px 4px 2px rgba(206,212,218,0.51);
+    margin-top: 15px;
+}

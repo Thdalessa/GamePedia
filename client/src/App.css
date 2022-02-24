@@ -1,5 +1,10 @@
 .App {
+  height: 100%;
+  width: 100%;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(10, 10vh) ;
 }
 
 .App-logo {
