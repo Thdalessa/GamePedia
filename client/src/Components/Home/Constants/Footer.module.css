@@ -1,6 +1,7 @@
-footer{
-    grid-column: 1/7;
-    grid-row: 10/11;
+.footer{
+    grid-column: 1/2;
+    grid-row:3/4;
+    height: 100%;
     
     background-color: #ced4da;
 
@@ -13,19 +14,21 @@ footer{
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 50% 50%;
 
+
     
 }
-
-h3{
+.footerTitle{
+    font-size: 25px;
     grid-row: 1/2;
     grid-column: 2/3;
     padding: 5px;
-    margin-top: 0px;
+    margin-top: 5px;
 }
 
-h4{
+/* .footerSubTitle{
+    font-size: 5px;
     grid-row: 2/3;
     grid-column: 2/3;
     padding: 0px;
     margin-top: 0px;
-}
+} */

@@ -1,0 +1,97 @@
+
+.cardsContainer{
+    background-color: (var(--grey3));
+    
+    padding: 30px;
+    grid-column: 1/2;
+    grid-row: 2/4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    overflow-y: scroll;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    border:transparent;
+    margin-bottom: 7vh
+
+    /* min-height: 82vh; */
+}
+
+.buttonContainer{
+    width: 100vw;
+}
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+    .cardsContainer::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.cardsContainer {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+/* BUTONS */
+
+.prevButton{
+    height: 50px;
+    width: 100px;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #dce3e9, #b9bfc4);
+    box-shadow:  7px 7px 14px #808387,
+                -7px -7px 14px #ffffff;
+    border: transparent;
+    margin-left: 0px;
+
+    margin-top: 10px;
+}
+
+.prevButton:hover{
+    border-radius: 17px;
+    background: linear-gradient(145deg, #b9bfc4, #dce3e9);
+    box-shadow:  7px 7px 14px #808387,
+                -7px -7px 14px #ffffff;
+    cursor: pointer;
+}
+
+.prevButton:focus{
+    border-radius: 17px;
+    background: #CED4DA;
+    box-shadow: inset 7px 7px 14px #808387,
+            inset -7px -7px 14px #ffffff;
+    cursor: pointer;
+}
+
+.nextButton{
+    height: 50px;
+    width: 100px;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #dce3e9, #b9bfc4);
+    box-shadow:  7px 7px 14px #808387,
+                -7px -7px 14px #ffffff;
+    border: transparent;
+    margin-left: 400px;
+    margin-top: 10px;
+}
+
+.nextButton:hover{
+    border-radius: 17px;
+    background: linear-gradient(145deg, #b9bfc4, #dce3e9);
+    box-shadow:  7px 7px 14px #808387,
+                -7px -7px 14px #ffffff;
+    cursor: pointer;
+}
+
+.nextButton:active{
+    border-radius: 17px;
+    background: #CED4DA;
+    box-shadow: inset 7px 7px 14px #808387,
+            inset -7px -7px 14px #ffffff;
+    cursor: pointer;
+}

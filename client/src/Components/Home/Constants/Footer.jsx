@@ -3,9 +3,9 @@ import styles from './Footer.module.css'
 
 function Footer() {
     return (
-        <footer className={styles}>
-            <h3>Made by Thiago D'Alessandro</h3>
-            <h4>Individual Project of Henry's Bootcamp</h4>
+        <footer className={styles.footer}>
+            <h3 className={styles.footerTitle}>Individual Project of Henry's Bootcamp by Thiago D'Alessandro</h3>
+            {/* <h4 className={styles.footerSubTitle}></h4> */}
         </footer>
     );
 };

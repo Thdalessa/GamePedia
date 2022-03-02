@@ -1,19 +1,25 @@
 import React from 'react';
-// import styles from './Card.module.css';
+import { Link } from 'react-router-dom';
+import styles from './Card.module.css';
 
-export default function Card (id, name, description, released, rating, genres, image){
+export default function Card (props){
+    
     return (
-        <div key={id}>
-            <img src={image}/>
-            <div>
-                <h1>{name}</h1>
-                <p>{description}</p>
-                <h4>{released}</h4>
-                <h4>{rating}</h4>
-                <ul>
-                    {genres.map((genre)=> <li>{genre}</li>)}
-                </ul>
+        
+        <Link to={{pathname:`/home/videogameDetail/${props.props.id}`, id:props.props.id}} className={styles.divLink} >
+            <div key={props.props.id} className={styles.cardContainer} >
+                <div className={styles.imageContainer}>
+                <img src={props.props.background_image} alt='game_image' className={styles.gameImage}/>
+                </div>
+                <div className={styles.infoContainer}>
+                    <h1 className={styles.name}>{props.props.name}</h1>
+                    <ul className={styles.genres}>
+                        {props.props.genres?.map((genre)=> {
+                            return <li key={props.props.genres.id} className={styles.genre}>{genre.name}</li>
+                        })}
+                    </ul>
+                </div>
             </div>
-        </div>
+        </Link>
     )
 }

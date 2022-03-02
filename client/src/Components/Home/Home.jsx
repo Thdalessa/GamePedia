@@ -1,34 +1,39 @@
 import styles from './Home.module.css';
 
+
 //Techs Imports
 import React from "react";
-import { Route, } from 'react-router-dom'
-import { Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+
 
 //Components Imports
 import Nav from './Constants/Nav'
+import Cards from '../Cards/Cards';
+import Footer from './Constants/Footer';
+import CardInDetail from './VideogameDetail/CardInDetail'
+import AddVideogame from './VideogameCreation/AddVideogame';
+
 
 export default function Home() {
+    let videogames = useSelector((state) => state.filteredVideogames)
+    
+
     return (
-        <div>
-        <Nav/>
-        <Switch>
-            <Route exact path='/home'>   
-                <div>
-                    Home path
-                </div>
-            </Route>
-            <Route path='/home/videogameDetail'>   
-                <div>
-                    Videogame Detail path
-                </div>    
-            </Route>
-            <Route path='/home/videogameCreation'>   
-                <div>
-                    Videogame Creation path
-                </div>  
-            </Route>
-        </Switch>
+        <div className={styles.home}>
+            <Nav/>
+            <Switch>
+                <Route exact path='/home'>   
+                    <Cards gamesFromApi={videogames}/>
+                </Route>
+                <Route path='/home/videogameDetail/'>     
+                    <CardInDetail/>
+                </Route>
+                <Route path='/home/videogameCreation'>   
+                    <AddVideogame/>
+                </Route>
+            </Switch>
+            <Footer/>
         </div>
     )
 }

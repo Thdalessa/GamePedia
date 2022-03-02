@@ -1,0 +1,32 @@
+
+.button{
+    grid-column: 9/10;
+    grid-row: 2/3;
+
+    border-radius: 50px;
+    background: linear-gradient(145deg, #b9c2ca, #9ca3aa);
+    box-shadow:  6px 6px 12px #495057,
+                 -6px -6px 12px #DEE2E6;
+
+    border: transparent;
+    height: 35px;
+    width: 35px;
+
+    display: flex;
+    margin-right: 50px ;
+}
+
+.button:hover{
+    border-radius: 50px;
+    background: #ADB5BD;
+    box-shadow: inset 6px 6px 6px #91989f,
+                inset -6px -6px 6px #c9d2db;
+    cursor: pointer;
+
+}
+
+.icon{
+    margin-top: 3.5px;
+    margin-left: -0.5px;
+    font-size: 25px;
+}

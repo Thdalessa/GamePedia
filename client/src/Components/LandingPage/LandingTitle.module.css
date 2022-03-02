@@ -5,7 +5,7 @@
              -38px -38px 31px #dce6f0;
 
     grid-column:4/6;
-    grid-row: 2/4;
+    grid-row: 2/5;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,7 +15,7 @@
 
 .Title{
     color: #212529;
-    font-size: 23px;
+    font-size: 32px;
     text-shadow: 0px 0px 21px rgba(0,0,0,0.68);
     grid-column: 1/5;
     grid-row: 1/2;
@@ -23,6 +23,7 @@
 
 .Subtitle{
     color: #212529;
+    font-size: 28px;
     text-shadow: 0px 0px 21px rgba(0,0,0,0.68);
     grid-column: 1/5;
     grid-row: 2/3;
