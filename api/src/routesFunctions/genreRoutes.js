@@ -5,7 +5,7 @@ const {REACT_APP_API_KEY} = process.env;
 
 const mainPage = `https://api.rawg.io/api/games?key=${REACT_APP_API_KEY}`;
 
-async function createGenresFromApi (req, res, next) {
+async function createGenresFromApi () {
     const apiCall = await axios.get(`https://api.rawg.io/api/genres?key=${REACT_APP_API_KEY}`)
     const apiGenres = apiCall.data.results;
     try {
@@ -20,22 +20,30 @@ async function createGenresFromApi (req, res, next) {
             })
             generos.push(newGenre);
         }
-        console.log('finish the task')
-        res.send(generos);
+        // console.log(generos)
+        return (generos);
     } catch(error) {
-        next(error);
+        console.log(error);
     }
 }
 
 async function getGenres (req, res, next) {
+    function reconditioningGenres (genres){
+        genres.map((genre) => {
+            return genre.dataValues
+        })
+    }
     try {
-        const genres = await Genre.findAll();
-        if(genres.length === 0){
-            await createGenresFromApi();
+        let genres = await Genre.findAll();
+        if(genres.length <=1){
+            genres = await createGenresFromApi();
+            reconditioningGenres(genres)
             res.send(genres);
         } else {
+            reconditioningGenres(genres)
             res.send(genres);
         }
+        console.log(genres)
     } catch(error) {
         next(error);
     }

@@ -20,7 +20,7 @@ export default function CardInDetail (){
     return (
         <div key={videogame.id} className={styles.cardContainer} onClick={styles.wtf}>
             <div className={styles.imageContainer}>
-                <img src={videogame.image} alt='game_image' className={styles.gameImage}/>
+                <img src={videogame.background_image || videogame.image} alt='game_image' className={styles.gameImage}/>
             </div>
                 <h1 className={styles.name}>{videogame.name}</h1>
                 <div className={styles.description}>{videogame.description && parse(videogame.description)}</div>

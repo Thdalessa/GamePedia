@@ -12,7 +12,7 @@ export default function AddVideogame() {
   const [form,setForm] = useState({
     name:'',
     description:'',
-    image:'',
+    background_image:'',
     released:'',
     rating:0,
     generos:[],
@@ -103,10 +103,10 @@ export default function AddVideogame() {
                 />
                 <input
                   type="text"
-                  name="image"
+                  name="background_image"
                   className={styles.inputImg}
                   placeholder="Image url..."
-                  value={form.image}
+                  value={form.background_image}
                   onChange={handleChanges}
                 />
                 <input

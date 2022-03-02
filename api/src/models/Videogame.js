@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
     //   type: DataTypes.ARRAY(DataTypes.STRING), 
     //   // allowNull: false
     // },
-    image: {
+    background_image: {
       type: DataTypes.TEXT //Here i decide to put TEXT instead of STRING since the URL might be fairly large
     },
   }, {

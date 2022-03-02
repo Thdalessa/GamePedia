@@ -65,9 +65,9 @@ async function getAllVideogames( req, res, next){
 
 
 async function createVideogame (req, res, next) {
-    const {name, description, image, released, rating, platforms, generos} = req.body;
+    const {name, description, background_image, released, rating, platforms, generos} = req.body;
     try {
-        let newVideogame = await Videogame.create({name, description, released, rating, platforms, image});
+        let newVideogame = await Videogame.create({name, description, released, rating, platforms, background_image});
 
         let generoooos = await Genre.findAll();
         let genresFromGame = generos.map((g) => {
