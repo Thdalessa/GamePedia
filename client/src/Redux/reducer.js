@@ -1,5 +1,5 @@
 
-import {GET_GAMES,GET_GAMES_BY_NAME,SORT_GAMES,FILTER_GAMES_BY_GAMES,FILTER_GAMES_BY_GENRE,GET_GENRES, GET_GAME_BY_ID, GET_PLATFORMS, POST_GAME} from './actions'
+import {EMPTY_COMPONENT,GET_GAMES,GET_GAMES_BY_NAME,SORT_GAMES,FILTER_GAMES_BY_GAMES,FILTER_GAMES_BY_GENRE,GET_GENRES, GET_GAME_BY_ID, GET_PLATFORMS, POST_GAME} from './actions'
 
 const initialState={
     videogames:[],
@@ -131,6 +131,11 @@ export default function reducer(state=initialState, action){
                 ...state, 
                 filteredVideogames: [...action.payload] + [...state.filteredVideogames],
                 videogames: [...action.payload].concat([...state.videogames]),
+            }
+        case EMPTY_COMPONENT:
+            return {
+                ...state,
+                detailedVideogame: []
             }
         default:
             return state;

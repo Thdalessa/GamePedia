@@ -72,11 +72,48 @@ export default function AddVideogame() {
     console.log(change)
   }
 
+  function cleaningChecks (genres, platforms) {
+    if(genres){
+      for(let i=0; i< genres.length; i++){
+        console.log(genres[i])
+        genres[i].checked = false;
+      }
+    }
+    if(platforms){
+      for(let i=0; i< platforms.length; i++){
+        console.log(platforms[i])
+        platforms[i].checked = false;
+      }
+    }
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('submiteado bro')
     console.log(form)
-    dispatch(postGame(form))
+    if(form.name === '' || form.description === '' || form.background_image === '' || form.released === '' || form.rating === 0 || form.generos.length === 0 || form.platforms.length === 0){
+      console.log(e.target.generos)
+      let genres = e.target.generos;
+      let plataformas = e.target.platforms;
+      cleaningChecks(genres,plataformas);
+      setForm({
+        ...form,
+        generos:[],
+        platforms:[]
+      })
+      alert('Faltan Campos')
+    } else {
+      dispatch(postGame(form))
+      alert(`Game ${form.name} created`)
+      setForm({
+        name:'',
+        description:'',
+        background_image:'',
+        released:'',
+        rating:0,
+        generos:[],
+        platforms:[],
+      })
+    }
     
   }
 
@@ -131,7 +168,7 @@ export default function AddVideogame() {
                     {genres?.map((genre) => {
                         return (
                         <div className="check" key={genre.id}>
-                            <input type="checkbox" name='generos'  value={genre.name} onChange={handleChanges}/>
+                            <input type="checkbox" name='generos' value={genre.name} onChange={handleChanges}/>
                             <label >{genre.name}</label>
                         </div>
                         );

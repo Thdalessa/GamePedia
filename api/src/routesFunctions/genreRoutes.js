@@ -1,6 +1,7 @@
 const {Videogame, Genre} = require('../db');
 const axios = require('axios');
 const db = require('../db');
+const res = require('express/lib/response');
 const {REACT_APP_API_KEY} = process.env;
 
 const mainPage = `https://api.rawg.io/api/games?key=${REACT_APP_API_KEY}`;
@@ -47,6 +48,32 @@ async function getGenres (req, res, next) {
     } catch(error) {
         next(error);
     }
+}
+
+async function filterGenres(req, res, next ){
+    Genre.findAll({
+        where: {
+            name: name
+        }
+    })
+        .then((genero) => {
+            return genero
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+
+    // let genero = await Genre.findAll({
+    //     where: {
+    //         name: name
+    //     }
+    // })
+    // if(genero){
+    //     return genero;
+    // } else {
+    //     return 'No existe ese genero'
+    // }
+
 }
 
 // async function getGenreByNames (names) {

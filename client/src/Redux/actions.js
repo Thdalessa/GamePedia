@@ -11,6 +11,7 @@ export const GET_GENRES = 'GET_GENRES';
 export const GET_GAME_BY_ID = 'GET_GAME_BY_ID';
 export const GET_PLATFORMS = 'GET_PLATFORMS'
 export const POST_GAME = 'POST_GAME'
+export const EMPTY_COMPONENT = 'EMPTY_COMPONENT'
 
 export function getGames(){
     return async function(dispatch){
@@ -129,5 +130,12 @@ export function postGame(data){
     }
 
 }
+
+export function emptyComponent(){
+    return {
+        type:EMPTY_COMPONENT,
+    }
+}
+
 
 

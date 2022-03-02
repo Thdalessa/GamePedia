@@ -3,7 +3,7 @@ import styles from './CardInDetail.module.css';
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from  'react-redux';
 import { useLocation } from 'react-router-dom';
-import { getGameById } from '../../../Redux/actions';
+import { getGameById, emptyComponent } from '../../../Redux/actions';
 import parse from 'html-react-parser'
 
 export default function CardInDetail (){
@@ -13,6 +13,7 @@ export default function CardInDetail (){
     let dispatch = useDispatch()
     useEffect(() => {
         dispatch(getGameById(gameId))
+        return () => {dispatch(emptyComponent())}
     },[])
     console.log(typeof videogame.description === 'string' || videogame.description === undefined)
 
