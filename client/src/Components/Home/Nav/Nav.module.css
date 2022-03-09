@@ -1,0 +1,8 @@
+nav{
+    background-color: var(--dark-grey5);
+    width: 100vw;
+
+    display:grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: 20% 60% 20%;
+}

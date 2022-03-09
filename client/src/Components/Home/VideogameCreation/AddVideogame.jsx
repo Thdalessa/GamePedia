@@ -4,6 +4,11 @@ import { useSelector,useDispatch } from "react-redux";
 import styles from "./AddVideogame.module.css";
 import { getPlatforms, getGenres, postGame } from "../../../Redux/actions";
 
+import estilos from './Modal.module.css'
+import { IoIosCloseCircleOutline } from "react-icons/io";
+import Modal,{ ModalHeader, ModalBody, ModalFooter} from './Modal'
+import { Link } from "react-router-dom";
+
 export default function AddVideogame() {
   let genres = useSelector((state) => state.genres);
   let plataformas = useSelector((store) => store.platforms);
@@ -19,7 +24,7 @@ export default function AddVideogame() {
     platforms:[],
   })
 
-
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     dispatch(getPlatforms())
     // console.log(genres)
@@ -75,13 +80,11 @@ export default function AddVideogame() {
   function cleaningChecks (genres, platforms) {
     if(genres){
       for(let i=0; i< genres.length; i++){
-        console.log(genres[i])
         genres[i].checked = false;
       }
     }
     if(platforms){
       for(let i=0; i< platforms.length; i++){
-        console.log(platforms[i])
         platforms[i].checked = false;
       }
     }
@@ -91,7 +94,6 @@ export default function AddVideogame() {
     e.preventDefault()
     console.log(form)
     if(form.name === '' || form.description === '' || form.background_image === '' || form.released === '' || form.rating === 0 || form.generos.length === 0 || form.platforms.length === 0){
-      console.log(e.target.generos)
       let genres = e.target.generos;
       let plataformas = e.target.platforms;
       cleaningChecks(genres,plataformas);
@@ -100,10 +102,12 @@ export default function AddVideogame() {
         generos:[],
         platforms:[]
       })
-      alert('Faltan Campos')
+      alert('Missing fields, please try again')
     } else {
       dispatch(postGame(form))
-      alert(`Game ${form.name} created`)
+      setShowModal(true);
+      console.log(form.name)
+      cleaningChecks(genres,plataformas);
       setForm({
         name:'',
         description:'',
@@ -188,6 +192,21 @@ export default function AddVideogame() {
                     ADD VIDEOGAME
                 </button>
         </form>
+        <Modal show={showModal}>
+         <div className={estilos.modalContainer}>
+         <ModalHeader>
+            <h2> Videogame created succesfully</h2>
+          </ModalHeader>
+          <div className={estilos.buttonContainer}>
+            <button className={estilos.closeButton} onClick={() => {setShowModal(false)}}><IoIosCloseCircleOutline /></button>
+          </div>
+          <ModalFooter>
+            <button className={estilos.modalBackHomeButton} onClick={() => {setShowModal(false)}}>
+                    <Link className={estilos.modalLinkButton} to='/home'>Go Back Home</Link>
+            </button>
+          </ModalFooter>
+         </div>
+        </Modal>
     </div>
     
   );

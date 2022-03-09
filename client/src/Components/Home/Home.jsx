@@ -8,9 +8,9 @@ import { useSelector } from 'react-redux';
 
 
 //Components Imports
-import Nav from './Constants/Nav'
+import Nav from './Nav/Nav'
 import Cards from '../Cards/Cards';
-import Footer from './Constants/Footer';
+import Footer from './Footer';
 import CardInDetail from './VideogameDetail/CardInDetail'
 import AddVideogame from './VideogameCreation/AddVideogame';
 

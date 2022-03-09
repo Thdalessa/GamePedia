@@ -57,6 +57,20 @@ export default function Cards (props){
         key={v.id}
       />}
       )}
+    {
+      [...games].length < 1?
+        <div className={styles.loadingContainer}>
+          <div className={styles.spinnerBox}>
+            <div className={styles.configureBorder1}>  
+              <div className={styles.configureCore}></div>
+            </div>  
+            <div className={styles.configureBorder2}>
+              <div className={styles.configureCore}></div>
+            </div> 
+          </div>
+        </div>
+      : <></>
+    }
     <div className={styles.buttonContainer}> 
       <button className={styles.prevButton} onClick={prevHandler}>Prev</button>
       <button className={styles.nextButton} onClick={nextHandler}>Next</button>

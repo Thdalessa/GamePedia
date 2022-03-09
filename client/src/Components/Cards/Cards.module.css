@@ -95,3 +95,99 @@
             inset -7px -7px 14px #ffffff;
     cursor: pointer;
 }
+
+
+/*           LOADING ANIMATION                   */
+
+@keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+      background-color: #4cc9f0;
+    }
+    25% {
+      transform: rotate(90deg);
+      background-color: #4895ef;
+    }
+    50% {
+      transform: rotate(180deg);
+      background-color: #4361ee;
+    }
+    75% {
+      transform: rotate(270deg);
+      background-color: #3f37c9;
+    }
+    100% {
+      transform: rotate(360deg);
+      background-color: #3a0ca3;
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+      background-color: #480ca8;
+    }
+    25% {
+      transform: rotate(-45deg);
+      background-color: #560bad;
+    }
+    50% {
+      transform: rotate(-135deg);
+      background-color: #7209b7;
+    }
+    75% {
+      transform: rotate(-225deg);
+      background-color: #b5179e;
+    }
+    100% {
+      transform: rotate(-315deg);
+      background-color: #f72585;
+    }
+  }
+
+.loadingContainer{
+    margin-left: calc(50vw - 280px);
+    margin-top: calc(50vh - 315px);
+    /* background-color: #f72585; */
+}
+
+.spinnerBox {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.configureBorder1 {
+    width: 215px;
+    height: 215px;
+    padding: 3px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4cc9f0;
+    animation: configure-clockwise 3s ease-in-out 0s infinite alternate;
+  }
+  
+  .configureBorder2 {
+    width: 215px;
+    height: 215px;
+    padding: 3px;
+    left: -115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f72585;
+    transform: rotate(45deg);
+    animation: configure-xclockwise 3s ease-in-out 0s infinite alternate;
+  }
+  
+  .configureCore {
+    width: 100%;
+    height: 100%;
+    background: rgb(206,212,218);
+    background: radial-gradient(circle, rgba(206,212,218,1) 0%, rgba(108,117,125,1) 100%);;
+  }
