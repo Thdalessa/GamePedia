@@ -10,8 +10,8 @@
     justify-content: space-between;
     align-content: space-between;
     overflow-y: scroll;
-    margin-left: 50px;
-    margin-right: 50px;
+    /* margin-left: 10px;
+    margin-right: 5px; */
     border-radius: 10px;
     border:transparent;
     margin-bottom: 7vh
@@ -102,46 +102,76 @@
 @keyframes configure-clockwise {
     0% {
       transform: rotate(0);
-      background-color: #4cc9f0;
+      border-radius: 12px;
+      background: #4cc9f0;
+      box-shadow: inset 10px 10px 20px #3a99b6,
+                  inset -10px -10px 20px #5ef9ff;
     }
     25% {
       transform: rotate(90deg);
-      background-color: #4895ef;
+      border-radius: 12px;
+      background: #4895ef;
+      box-shadow: inset 10px 10px 20px #3771b6,
+                  inset -10px -10px 20px #59b9ff;
     }
     50% {
       transform: rotate(180deg);
-      background-color: #4361ee;
+      border-radius: 12px;
+      background: #4361ee;
+      box-shadow: inset 10px 10px 20px #334ab5,
+                  inset -10px -10px 20px #5378ff;
     }
     75% {
       transform: rotate(270deg);
-      background-color: #3f37c9;
+      border-radius: 12px;
+      background: #3f37c9;
+      box-shadow: inset 10px 10px 20px #302a99,
+                  inset -10px -10px 20px #4e44f9;
     }
     100% {
       transform: rotate(360deg);
-      background-color: #3a0ca3;
+      border-radius: 12px;
+      background: #3a0ca3;
+      box-shadow: inset 10px 10px 20px #2c097c,
+                  inset -10px -10px 20px #480fca;
     }
   }
   
   @keyframes configure-xclockwise {
     0% {
       transform: rotate(45deg);
-      background-color: #480ca8;
+      border-radius: 12px;
+      background: #480ca8;
+      box-shadow: inset 10px 10px 20px #370980,
+                  inset -10px -10px 20px #590fd0;
     }
     25% {
       transform: rotate(-45deg);
-      background-color: #560bad;
+      border-radius: 12px;
+      background: #560bad;
+      box-shadow: inset 10px 10px 20px #410883,
+                  inset -10px -10px 20px #6b0ed7;
     }
     50% {
       transform: rotate(-135deg);
-      background-color: #7209b7;
+      border-radius: 12px;
+      background: #7209b7;
+      box-shadow: inset 10px 10px 20px #57078b,
+                  inset -10px -10px 20px #8d0be3;
     }
     75% {
       transform: rotate(-225deg);
-      background-color: #b5179e;
+      border-radius: 12px;
+      background: #b5179e;
+      box-shadow: inset 10px 10px 20px #8a1178,
+                  inset -10px -10px 20px #e01dc4;
     }
     100% {
       transform: rotate(-315deg);
-      background-color: #f72585;
+      border-radius: 12px;
+      background: #f72585;
+      box-shadow: inset 10px 10px 20px #bc1c65,
+                  inset -10px -10px 20px #ff2ea5;
     }
   }
 
@@ -186,8 +216,13 @@
   }
   
   .configureCore {
-    width: 100%;
-    height: 100%;
-    background: rgb(206,212,218);
-    background: radial-gradient(circle, rgba(206,212,218,1) 0%, rgba(108,117,125,1) 100%);;
+    width: 95%;
+    height: 95%;
+    /* background: #ced4da;
+    background: radial-gradient(circle, #ced4da 0%, rgba(108,117,125,1) 100%);; */
+    border-radius: 12px;
+    background: #ADB5BD;
+    box-shadow: inset 10px 10px 20px #838a90,
+                inset -10px -10px 20px #d7e0ea;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0.1));
   }

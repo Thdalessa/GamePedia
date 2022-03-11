@@ -3,10 +3,10 @@
     grid-column: 9/10;
     grid-row: 2/3;
 
-    border-radius: 50px;
-    background: linear-gradient(145deg, #b9c2ca, #9ca3aa);
-    box-shadow:  6px 6px 12px #495057,
-                 -6px -6px 12px #DEE2E6;
+    border-radius: 12px;
+    background: #6C757D;
+    box-shadow:  5px 5px 11px #4d5359,
+                 -5px -5px 11px #8b97a1;
 
     border: transparent;
     height: 35px;
@@ -17,10 +17,20 @@
 }
 
 .button:hover{
-    border-radius: 50px;
-    background: #ADB5BD;
-    box-shadow: inset 6px 6px 6px #91989f,
-                inset -6px -6px 6px #c9d2db;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #616971, #747d86);
+    box-shadow:  5px 5px 11px #4d5359,
+                 -5px -5px 11px #8b97a1;
+    cursor: pointer;
+
+}
+
+
+.button:focus {
+    border-radius: 12px;
+    background: #6C757D;
+    box-shadow: inset 5px 5px 7px #4c5258,
+                inset -5px -5px 7px #8c98a3;
     cursor: pointer;
 
 }
