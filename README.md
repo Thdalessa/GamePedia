@@ -1,5 +1,6 @@
 
 # Gamepedia
+![GAMEPEDIA (2)](https://user-images.githubusercontent.com/89609966/157931512-5a7a6b9e-2341-44c7-baee-d4338e8ebf0c.gif)
 
 ### Description
 🔹This project was created in [Soy Henry's Bootcamp](https://www.soyhenry.com/)  
