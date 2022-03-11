@@ -35,7 +35,9 @@ Hope you enjoy it!
 
 ### Images
 ![LandingPage](https://user-images.githubusercontent.com/89609966/156949395-70639f9c-e8b5-47cc-acfb-f05eb3fd264d.png)  
-![HomePage](https://user-images.githubusercontent.com/89609966/157922443-13c52ba1-f2a7-4799-8dd3-5862e3902a04.png)  
-![VideogameDetail](https://user-images.githubusercontent.com/89609966/157922511-c274b6cd-0729-4038-a59f-7912fe12b8f1.png)  
-![AddingVideogame](https://user-images.githubusercontent.com/89609966/157922564-f5a0f369-967f-4df3-a675-9526acfcec87.png)  
+![HomePage](https://user-images.githubusercontent.com/89609966/157926373-5ca19497-44d7-4beb-bc2a-2efef775ef35.png)  
+![VideogameDetail](https://user-images.githubusercontent.com/89609966/157926307-fb7a7bca-2236-4f60-84a1-1b09d6160fde.png)  
+![AddingVideogame](https://user-images.githubusercontent.com/89609966/157926301-ebf776af-72c5-4aa7-9949-44740b131d53.png)  
+
+
 
