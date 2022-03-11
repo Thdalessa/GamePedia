@@ -21,7 +21,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('C:\Users\thdal\Desktop\PI-Videogames-main\client\src\Images\Playstation_Wallpaper2.png');
+  background-image: url("C:\Users\thdal\Desktop\GamePedia\client\src\Images\Playstation_Wallpaper2.png");
   background-size:cover;
   background-repeat: none;
   
